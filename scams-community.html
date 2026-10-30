@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scams &amp; Community Alert Hub | Youth Cyber Shield LK — University of Ruhuna</title>
+  <meta name="description" content="Development Programme Mini Project Demo & Report — Top 4 Social Media Scams & Community Scam Alert Board for Sri Lankan Youth. Faculty of Engineering, University of Ruhuna." />
+  <link rel="icon" type="image/png" href="ruhuna-logo.png" />
+  <link rel="stylesheet" href="styles.css?v=2.2" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. TOP ACADEMIC PROJECT BAR
+       ======================================================================== -->
+  <div class="uni-top-bar">
+    <div class="container uni-top-inner">
+      <div>
+        <span class="uni-badge-pill">Development Programme Mini Project</span>
+        <span style="margin-left: 8px;">Faculty of Engineering, University of Ruhuna (Hapugala, Galle)</span>
+      </div>
+      <div>
+        <button type="button" class="top-helpline-trigger" data-open-helpline title="Click to view all Sri Lankan emergency scam helplines">
+          🚨 Emergency Cyber Helpline (SL CERT): <strong>+94 11 269 1692</strong>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. QUICK ACCESS NAVIGATION BAR (With Ruhuna Logo in Top-Left)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link">
+        <img
+          src="ruhuna-logo.png"
+          alt="University of Ruhuna Logo"
+          title="University of Ruhuna — Development Programme Mini Project"
+          class="brand-logo"
+        />
+        <div>
+          <div class="brand-title">Youth Cyber Shield LK</div>
+          <div class="brand-subtitle">Online Scam Awareness Initiative</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn-scams.html">Learn About Scams</a></li>
+        <li><a href="scams-community.html" style="color: var(--primary); font-weight: 700;">Scams &amp; Community Hub</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="btn btn-danger btn-sm" data-open-helpline style="display: inline-flex; align-items: center; gap: 5px;">
+          🚨 Where to Report
+        </button>
+        <button type="button" class="btn btn-primary btn-sm" data-open-report>
+          Read Project Report
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Menu Button -->
+      <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-section-title">Navigation Menu</div>
+        <ul class="mobile-nav-links">
+          <li>
+            <a href="index.html" class="mobile-nav-link">
+              <span class="mobile-nav-icon">🏠</span>
+              <span>Home (Overview &amp; Findings)</span>
+            </a>
+          </li>
+          <li>
+            <a href="learn-scams.html" class="mobile-nav-link">
+              <span class="mobile-nav-icon">🎓</span>
+              <span>Learn About Scams (Lab &amp; Quiz)</span>
+              <span class="mobile-nav-tag">Interactive</span>
+            </a>
+          </li>
+          <li>
+            <a href="scams-community.html" class="mobile-nav-link active">
+              <span class="mobile-nav-icon">📢</span>
+              <span>Scams &amp; Community Hub</span>
+              <span class="mobile-nav-tag">Live Feed</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-nav-section-title">Emergency &amp; Details</div>
+
+        <div class="mobile-nav-actions">
+          <button type="button" class="btn btn-danger btn-sm" data-open-helpline style="width: 100%; justify-content: center;">
+            🚨 Emergency Helplines (SL CERT &amp; CID)
+          </button>
+          <button type="button" class="btn btn-primary btn-sm" data-open-report style="width: 100%; justify-content: center;">
+            📄 Read Project Report &amp; Team Details
+          </button>
+        </div>
+
+        <div class="mobile-nav-footer">
+          Faculty of Engineering • University of Ruhuna<br />
+          Development Programme Mini Project
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       3. COMMUNITY HERO BANNER (Animated Citizen Watch & Defense Network)
+       ======================================================================== -->
+  <section class="community-hero-banner" id="top">
+    <!-- Interactive Canvas Visualizing the Connected Sri Lankan Community Network -->
+    <canvas class="community-hero-canvas" id="community-network-canvas" aria-hidden="true"></canvas>
+
+    <div class="container hero-grid">
+      <!-- Left Column: Community Mission & Awakening -->
+      <div>
+        <span class="hero-tag" style="background: rgba(37, 99, 235, 0.25); border-color: rgba(59, 130, 246, 0.45); color: #93c5fd;">
+          <span class="live-pulse-dot"></span> Sri Lankan Youth &amp; Citizen Watch • Community Defense
+        </span>
+        <h1 class="hero-title" style="color: #ffffff;">
+          Empowering Sri Lankan Society to Spot, Share &amp; Stop Online Scams
+        </h1>
+        <p class="hero-lead" style="color: #cbd5e1;">
+          Cyber fraudsters rely on isolating their victims in private DMs. Our Community Hub unites Sri Lankan students, parents, and citizens across all 25 districts: when one person encounters a fake parcel SMS, Telegram job trap, or OTP trick and shares it here, the entire society is shielded before financial harm can spread.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#tabs-section" class="btn btn-primary" onclick="document.querySelector('.tab-btn[data-target-tab=\'tab-community\']').click();">
+            📢 Share a Scam Alert with Society
+          </a>
+          <a href="#tabs-section" class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: #ffffff; border-color: rgba(255,255,255,0.25);" onclick="document.querySelector('.tab-btn[data-target-tab=\'tab-scams\']').click();">
+            🔍 Explore Top 4 Common Scams
+          </a>
+        </div>
+
+        <div class="community-stats-row">
+          <div class="community-stat-pill">
+            <span>👥</span>
+            <span><strong>420+</strong> Youth Surveyed</span>
+          </div>
+          <div class="community-stat-pill">
+            <span>📍</span>
+            <span><strong>25</strong> Districts Alerted</span>
+          </div>
+          <div class="community-stat-pill">
+            <span>🛡️</span>
+            <span><strong>100%</strong> Crowdsourced Watch</span>
+          </div>
+          <div class="community-stat-pill">
+            <span>⚡</span>
+            <span><strong>Real-Time</strong> Society Sync</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Live Community Watchtower Card -->
+      <aside class="community-live-card" aria-label="Community Watch Live Feed">
+        <div class="community-card-header">
+          <div style="font-weight: 700; font-size: 14.5px; color: #f8fafc; display: flex; align-items: center; gap: 6px;">
+            <span>🤝</span>
+            <span>Community Watchtower</span>
+          </div>
+          <span class="community-badge-live">
+            <span class="live-pulse-dot"></span> Live Citizen Alerts
+          </span>
+        </div>
+
+        <div class="community-stream-list">
+          <div class="community-stream-item">
+            <span class="community-stream-icon">📢</span>
+            <div>
+              <div class="community-stream-tag">Galle Youth Hub • WhatsApp Task</div>
+              <div>Reported VIP Prepaid Task bot (+94 77 XXX) promising Rs. 15,000 daily — 14 students alerted.</div>
+            </div>
+          </div>
+
+          <div class="community-stream-item">
+            <span class="community-stream-icon">🛡️</span>
+            <div>
+              <div class="community-stream-tag">Colombo Community • Phishing Link</div>
+              <div>Spotted fake SL Post delivery fee SMS (<code>slpost-track.top</code>) — card compromise averted.</div>
+            </div>
+          </div>
+
+          <div class="community-stream-item">
+            <span class="community-stream-icon">🚨</span>
+            <div>
+              <div class="community-stream-tag">Kandy Student • Account Hijacking</div>
+              <div>Warned batchmates of hacked friend DM asking for 6-digit WhatsApp recovery code.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="community-pledge-quote">
+          “When one person speaks up, our whole society stays protected.”
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          style="width: 100%;"
+          onclick="document.querySelector('.tab-btn[data-target-tab=\'tab-community\']').click(); const inp = document.getElementById('scam-identifier'); if (inp) { inp.scrollIntoView({behavior:'smooth', block:'center'}); inp.focus(); }"
+        >
+          📢 Warn the Community About a Scam →
+        </button>
+      </aside>
+    </div>
+
+    <!-- Animated Horizontal Community Wire Ticker -->
+    <div class="community-ticker-bar" aria-hidden="true">
+      <div class="community-ticker-track">
+        <span class="community-ticker-item">
+          <span class="live-pulse-dot"></span> <strong>COMMUNITY WIRE</strong>: Galle Student flagged Telegram VIP Task scam
+        </span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Colombo Citizen reported fake SL Post tracking link</span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Matara Batch warned of WhatsApp OTP impersonation</span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Kandy Youth reported fake scholarship fee scam</span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Kurunegala Community blocked crypto doubler Telegram group</span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Jaffna Student reported fake prize giveaway DM</span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Emergency Helpline: Sri Lanka CERT (+94 11 269 1692)</span>
+        <!-- Duplicate for continuous seamless scroll -->
+        <span class="community-ticker-item">
+          <span class="live-pulse-dot"></span> <strong>COMMUNITY WIRE</strong>: Galle Student flagged Telegram VIP Task scam
+        </span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Colombo Citizen reported fake SL Post tracking link</span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Matara Batch warned of WhatsApp OTP impersonation</span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Kandy Youth reported fake scholarship fee scam</span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Kurunegala Community blocked crypto doubler Telegram group</span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Jaffna Student reported fake prize giveaway DM</span>
+        <span class="community-ticker-item"><span class="dot-sep">•</span> Emergency Helpline: Sri Lanka CERT (+94 11 269 1692)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. INTERACTIVE TABS CONTAINER
+       ======================================================================== -->
+  <main class="section" id="tabs-section" style="padding-top: 40px;">
+    <div class="container">
+      
+      <!-- Interactive Tab Nav Switcher -->
+      <div class="tabs-nav" role="tablist" aria-label="Scam Knowledge and Community Reporting">
+        <button
+          type="button"
+          class="tab-btn active"
+          role="tab"
+          aria-selected="true"
+          aria-controls="tab-scams"
+          data-target-tab="tab-scams"
+          id="btn-tab-scams"
+        >
+          <span>🎯 Top 4 Social Media Scams Targeting Sri Lankan Youth</span>
+          <span class="tab-badge badge-red">4 Categories</span>
+        </button>
+
+        <button
+          type="button"
+          class="tab-btn"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tab-community"
+          data-target-tab="tab-community"
+          id="btn-tab-community"
+        >
+          <span>📢 Found a Scam? Share It to Warn Sri Lankan Society</span>
+          <span class="tab-badge badge-amber">Live Alert Board</span>
+        </button>
+      </div>
+
+      <!-- ====================================================================
+           TAB PANE 1: Top 4 Social Media Scams Targeting Sri Lankan Youth
+           ==================================================================== -->
+      <div class="tab-pane active" id="tab-scams" role="tabpanel" aria-labelledby="btn-tab-scams">
+        <div class="section-header" style="max-width: 800px; margin-bottom: 28px;">
+          <span class="section-eyebrow">Tab 01 • Empirical Threat Directory</span>
+          <h2 class="section-title">Top 4 Social Media Scams Targeting Sri Lankan Youth</h2>
+          <p class="section-desc">
+            Empirical data from our Faculty of Engineering survey (<strong>N = 420</strong> youth respondents) demonstrates that these 4 attack vectors account for over 84% of financial fraud and social media compromises in Sri Lanka.
+          </p>
+        </div>
+
+        <div class="scam-grid">
+          <!-- Scam Card 1 -->
+          <article class="scam-card">
+            <div>
+              <div class="scam-card-top">
+                <span class="scam-badge badge-red">Most Common (42% of Cases)</span>
+                <span style="font-size:13px; color:var(--text-muted); font-weight:600;">WhatsApp / Telegram</span>
+              </div>
+              <h3>1. “Like Videos &amp; Earn” Part-Time Job Scams</h3>
+              <p style="margin-top:8px;">
+                Scammers message you offering Rs. 5,000–25,000/day to like YouTube or TikTok videos. They actually pay Rs. 1,000–1,500 at first to win your trust, then ask you to deposit money for “VIP Prepaid Tasks” and vanish with your savings.
+              </p>
+            </div>
+            <div class="scam-example-box">
+              <strong>Typical Message:</strong> “Earn Rs. 12,000 daily from your phone! Like 3 YouTube videos and message our Telegram receptionist for instant Rs. 1,500 bonus.”
+            </div>
+            <div class="scam-tip">
+              ✓ Safety Rule: Legitimate jobs never ask you to deposit money to unlock tasks or commissions.
+            </div>
+          </article>
+
+          <!-- Scam Card 2 -->
+          <article class="scam-card">
+            <div>
+              <div class="scam-card-top">
+                <span class="scam-badge badge-red">High Risk (29% of Cases)</span>
+                <span style="font-size:13px; color:var(--text-muted); font-weight:600;">SMS / FB / Instagram</span>
+              </div>
+              <h3>2. Fake SL Post Parcel &amp; Brand Giveaway Links</h3>
+              <p style="margin-top:8px;">
+                Fake SMS messages or social ads claim your Sri Lanka Post parcel is held for a small fee (e.g., Rs. 98) or that you won a Dialog/Mobitel/Daraz prize. The link leads to a fake website ending in <code>.top</code> or <code>.xyz</code> that steals your card details.
+              </p>
+            </div>
+            <div class="scam-example-box">
+              <strong>Typical Message:</strong> “SL-POST: Your parcel is held due to an incomplete address. Pay Rs. 98 fee within 2 hours at <code>slpost-track.top</code>.”
+            </div>
+            <div class="scam-tip">
+              ✓ Safety Rule: Check the website address carefully. Official Sri Lankan sites end in <code>.gov.lk</code>, <code>.ac.lk</code>, or <code>.lk</code>.
+            </div>
+          </article>
+
+          <!-- Scam Card 3 -->
+          <article class="scam-card">
+            <div>
+              <div class="scam-card-top">
+                <span class="scam-badge badge-amber">Account Hijacking (18% of Cases)</span>
+                <span style="font-size:13px; color:var(--text-muted); font-weight:600;">WhatsApp / Instagram DM</span>
+              </div>
+              <h3>3. 6-Digit OTP Code &amp; Hacked Friend Messages</h3>
+              <p style="margin-top:8px;">
+                A friend’s already-hacked account messages you in Singlish/Sinhala asking for a 6-digit SMS code “sent to your phone by mistake” or asks for urgent hospital money via EzCash/bank transfer.
+              </p>
+            </div>
+            <div class="scam-example-box">
+              <strong>Typical Message:</strong> “Malli hadissi! I sent a 6-digit code to your number by mistake, ikmanata eka ewannako.”
+            </div>
+            <div class="scam-tip">
+              ✓ Safety Rule: Never share a 6-digit SMS OTP code. Always make a normal phone call to verify if a friend asks for money.
+            </div>
+          </article>
+
+          <!-- Scam Card 4 -->
+          <article class="scam-card">
+            <div>
+              <div class="scam-card-top">
+                <span class="scam-badge badge-amber">Growing Threat (11% of Cases)</span>
+                <span style="font-size:13px; color:var(--text-muted); font-weight:600;">TikTok / Telegram / FB</span>
+              </div>
+              <h3>4. Fake Crypto/Forex Doublers &amp; Scholarship Scams</h3>
+              <p style="margin-top:8px;">
+                Pages impersonating trading gurus, influencers, or foreign scholarship agencies promise guaranteed 300% crypto returns or visa placements if you pay an upfront “processing or registration fee”.
+              </p>
+            </div>
+            <div class="scam-example-box">
+              <strong>Typical Message:</strong> “Invest USDT $50 in our automated AI pool and receive $250 back to your Binance wallet in 4 hours.”
+            </div>
+            <div class="scam-tip">
+              ✓ Safety Rule: Any scheme promising guaranteed fast returns or asking for upfront visa fees via personal accounts is a scam.
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top: 36px; padding: 22px; background: rgba(255, 255, 255, 0.85); border-radius: var(--radius-md); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h4 style="font-size: 16px; font-weight: 700; color: var(--text-main);">Have you personally witnessed or received one of these scams?</h4>
+            <p style="font-size: 13.5px; color: var(--text-muted);">Share the scammer’s contact info or link to warn other young people right now.</p>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="document.querySelector('.tab-btn[data-target-tab=\'tab-community\']').click();">
+            Switch to Share Scam Tab →
+          </button>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           TAB PANE 2: Found a Scam? Share It to Warn Sri Lankan Society
+           ==================================================================== -->
+      <div class="tab-pane" id="tab-community" role="tabpanel" aria-labelledby="btn-tab-community">
+        <div class="section-header" style="max-width: 800px; margin-bottom: 28px;">
+          <span class="section-eyebrow">Tab 02 • Community Watch &amp; Public Warning Board</span>
+          <h2 class="section-title">Found a Scam? Share It to Warn Sri Lankan Society</h2>
+          <p class="section-desc">
+            Help prevent fellow youth, students, and families from losing hard-earned money. Submit any suspicious WhatsApp/Telegram recruiter handle, phone number, SMS text, or spoofed URL below.
+          </p>
+        </div>
+
+        <div class="community-grid">
+          <!-- Left Column: Submit a Scam Alert Form -->
+          <div class="report-form-card">
+            <h3 style="font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 4px;">
+              Submit a Scam Alert
+            </h3>
+            <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 18px;">
+              Your report will immediately appear on the public community board to warn others.
+            </p>
+
+            <form id="community-scam-form">
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="reporter-name">Your Name or Alias (Optional)</label>
+                  <input type="text" id="reporter-name" class="form-input" placeholder="e.g., Kasun (Galle) or Student" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="reporter-district">Your District</label>
+                  <select id="reporter-district" class="form-select">
+                    <option value="Galle">Galle</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Matara">Matara</option>
+                    <option value="Kandy">Kandy</option>
+                    <option value="Gampaha">Gampaha</option>
+                    <option value="Kurunegala">Kurunegala</option>
+                    <option value="Jaffna">Jaffna</option>
+                    <option value="Hambantota">Hambantota</option>
+                    <option value="Island-wide">Other / Island-wide</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="scam-platform">Platform Where Found *</label>
+                  <select id="scam-platform" class="form-select" required>
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Telegram">Telegram</option>
+                    <option value="SMS / Call">SMS / Phone Call</option>
+                    <option value="Instagram / TikTok">Instagram / TikTok</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Website Link">Fake Website Link</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="scam-category">Type of Scam *</label>
+                  <select id="scam-category" class="form-select" required>
+                    <option value="Part-Time Task / Job Scam">Part-Time Task / Job Scam</option>
+                    <option value="Fake Parcel / Bank Link">Fake Parcel / Bank Phishing Link</option>
+                    <option value="6-Digit OTP / Hacked Friend">6-Digit OTP / Hacked Friend Account</option>
+                    <option value="Fake Brand Giveaway">Fake Brand Giveaway / Prize</option>
+                    <option value="Crypto / Investment Scam">Crypto / Forex Investment Scam</option>
+                    <option value="Other Scam">Other Social Media Scam</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="scam-identifier">
+                  Scammer Phone Number, Username, or Fake Link *
+                </label>
+                <input
+                  type="text"
+                  id="scam-identifier"
+                  class="form-input"
+                  placeholder="e.g., +94 76 XXX XXXX, @sl_vip_task_bot, or https://slpost-pay.top"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="scam-description">
+                  How Did the Scam Work? (Message or Details to Warn Society) *
+                </label>
+                <textarea
+                  id="scam-description"
+                  class="form-textarea"
+                  placeholder="Describe what the scammer said or asked for (please do not include your own private passwords or bank numbers)..."
+                  required
+                ></textarea>
+              </div>
+
+              <label class="form-checkbox-row">
+                <input type="checkbox" id="reporter-anonymous" />
+                <span>Hide my name and post anonymously as <strong>“Community Member”</strong></span>
+              </label>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                📢 Share Scam Alert with Society
+              </button>
+
+              <div class="form-status-msg" id="community-form-status" role="status">
+                ✓ Thank you! Your scam alert has been posted to the Community Watch board.
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Column: Live Community Scam Alerts Feed -->
+          <div class="alerts-feed-card">
+            <div class="feed-header-row">
+              <div>
+                <h3 style="font-size: 18px; font-weight: 700; color: var(--text-main);">
+                  Live Community Scam Alerts
+                </h3>
+                <p style="font-size: 13px; color: var(--text-muted);">
+                  Recent scams reported by Sri Lankan youth &amp; community members
+                </p>
+              </div>
+              <span class="scam-badge badge-red" id="total-alerts-count">3 Active Alerts</span>
+            </div>
+
+            <div class="feed-filter-row" id="community-filter-bar">
+              <button type="button" class="preset-chip" data-filter-platform="all" data-active>All Reports</button>
+              <button type="button" class="preset-chip" data-filter-platform="WhatsApp">WhatsApp</button>
+              <button type="button" class="preset-chip" data-filter-platform="Telegram">Telegram</button>
+              <button type="button" class="preset-chip" data-filter-platform="SMS / Call">SMS / Links</button>
+              <button type="button" class="preset-chip" data-filter-platform="Instagram / TikTok">IG / TikTok</button>
+            </div>
+
+            <div class="alerts-list" id="community-alerts-list">
+              <!-- Populated dynamically by app.js using localStorage -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       5. CLEAN LIGHT FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-note">
+        <strong>Development Programme Mini Project Demo</strong><br />
+        Faculty of Engineering, University of Ruhuna • Hapugala, Galle, Sri Lanka
+      </div>
+
+      <div class="footer-note">
+        Built for Public Cyber Safety Awareness • © 2026 Project Team
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       7. PROJECT REPORT SUMMARY MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="report-modal" role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <div style="font-size: 12px; font-weight: 700; color: var(--ruhuna-maroon); text-transform: uppercase;">
+            University of Ruhuna • Faculty of Engineering
+          </div>
+          <h3 id="report-modal-title" style="font-size: 18px; font-weight: 700; color: var(--text-main);">
+            Development Programme Mini Project Report Summary
+          </h3>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="close-report-modal">Close ✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div style="background: var(--bg-subtle); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+          <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">
+            Project Title
+          </div>
+          <div style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 12px;">
+            Online Scam Awareness Among Sri Lankan Youth: Survey Analysis &amp; Preventive Web Platform
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; padding-top: 10px; border-top: 1px solid var(--border-color);">
+            <img
+              src="supervisor.jpg"
+              alt="Mr. B.D.S.M. Kavisigamuwa"
+              style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: center 22%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <div style="font-size: 13.5px; color: var(--text-body);">
+              <strong>Project Supervisor:</strong> Mr. B.D.S.M. Kavisigamuwa<br />
+              <strong>Group Members:</strong> K.M.R.I. Suraweera (Developer), K.H. Sumuditha, S.D.T.A. Sumedhaarachchi, S. Thaaniyaluxman
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border-color);">
+            <img
+              src="suraweera.jpg"
+              alt="K.M.R.I. Suraweera (Developer)"
+              style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <span style="font-size: 13px; font-weight: 600; color: var(--text-main);">K.M.R.I. Suraweera <small style="color: var(--primary); font-weight: 700;">(Developer)</small></span>
+            <span style="color: var(--border-color);">•</span>
+            <img
+              src="sumuditha.jpg"
+              alt="K.H. Sumuditha"
+              style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <span style="font-size: 13px; font-weight: 600; color: var(--text-main);">K.H. Sumuditha</span>
+            <span style="color: var(--border-color);">•</span>
+            <img
+              src="sumedhaarachchi.jpg"
+              alt="S.D.T.A. Sumedhaarachchi"
+              style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <span style="font-size: 13px; font-weight: 600; color: var(--text-main);">S.D.T.A. Sumedhaarachchi</span>
+            <span style="color: var(--border-color);">•</span>
+            <img
+              src="thaaniyaluxman.jpg"
+              alt="S. Thaaniyaluxman"
+              style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <span style="font-size: 13px; font-weight: 600; color: var(--text-main);">S. Thaaniyaluxman</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; color: var(--text-main); margin-bottom: 6px;">1. Executive Abstract</h4>
+          <p style="font-size: 14.5px; color: var(--text-body);">
+            With high social media penetration among Sri Lankan youth aged 16–26, scammers increasingly use WhatsApp, Telegram, Instagram, and TikTok to run “part-time task” Ponzi schemes, phishing giveaways, and OTP account takeovers. Our Development Programme Mini Project survey (<strong>N = 420</strong> respondents) found that while youth use social platforms daily, <strong>68.4%</strong> struggle to spot spoofed website domains (<code>.top</code>, <code>.xyz</code>) on mobile phones and <strong>81.0%</strong> are unaware of official reporting procedures through Sri Lanka CERT|CC.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; color: var(--text-main); margin-bottom: 6px;">2. Key Survey Takeaways (N = 420 Youth Respondents)</h4>
+          <ul style="padding-left: 20px; font-size: 14.5px; color: var(--text-body); display: flex; flex-direction: column; gap: 6px;">
+            <li><strong>73.1%</strong> received unsolicited WhatsApp or Telegram messages offering high daily payouts for liking social media posts.</li>
+            <li><strong>42.0%</strong> of reported financial losses originated from “VIP Prepaid Task” traps after scammers paid a small initial bonus (Rs. 1,000–1,500) to build trust.</li>
+            <li><strong>68.4%</strong> could not reliably distinguish fake courier/telecom phishing links from official <code>.lk</code> websites.</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: flex-end; padding-top: 12px; border-top: 1px solid var(--border-color);">
+          <a href="learn-scams.html#checker" class="btn btn-primary btn-sm">
+            Try the Scam Message Checker
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       7. EMERGENCY SCAM HELPLINES POPUP MODAL (Quick Access)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="helpline-modal" role="dialog" aria-modal="true" aria-labelledby="helpline-modal-title">
+    <div class="modal-card" style="border-top: 4px solid #e11d48; max-width: 680px;">
+      <div class="modal-head" style="border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
+        <div>
+          <div style="font-size: 12px; font-weight: 700; color: #e11d48; text-transform: uppercase; letter-spacing: 0.5px;">
+            🚨 Emergency Assistance • Sri Lanka
+          </div>
+          <h3 id="helpline-modal-title" style="font-size: 20px; font-weight: 700; color: var(--text-main);">
+            Where to Report Scams in Sri Lanka
+          </h3>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="close-helpline-modal">Close ✕</button>
+      </div>
+
+      <div class="modal-body" style="display: flex; flex-direction: column; gap: 16px; padding: 22px;">
+        <p style="font-size: 14.5px; color: var(--text-muted); margin: 0;">
+          If you or someone you know has shared a 6-digit OTP, clicked a phishing link, or transferred money to a scammer, contact these official organizations immediately:
+        </p>
+
+        <ul class="helpline-list" style="margin: 0;">
+          <li class="helpline-item">
+            <div>
+              <strong style="color: var(--text-main); font-size: 15px;">Sri Lanka CERT|CC (National Cyber Security Center)</strong>
+              <span style="display: block; font-size: 13.5px; color: var(--text-muted); margin-top: 3px;">
+                Hotline: <strong>+94 11 269 1692</strong> • Email: <a href="mailto:report@cert.gov.lk" style="color: var(--primary);">report@cert.gov.lk</a>
+              </span>
+            </div>
+            <button type="button" class="btn btn-outline btn-sm" data-copy="+94 11 269 1692">
+              Copy
+            </button>
+          </li>
+          <li class="helpline-item">
+            <div>
+              <strong style="color: var(--text-main); font-size: 15px;">CID Cyber Crime Division (Sri Lanka Police)</strong>
+              <span style="display: block; font-size: 13.5px; color: var(--text-muted); margin-top: 3px;">
+                Tel: <strong>011-2422176</strong> • Police Emergency: <strong>119</strong>
+              </span>
+            </div>
+            <span class="scam-badge badge-red">24/7 Police</span>
+          </li>
+          <li class="helpline-item">
+            <div>
+              <strong style="color: var(--text-main); font-size: 15px;">Your Bank’s 24/7 Fraud &amp; Card Hotline</strong>
+              <span style="display: block; font-size: 13.5px; color: var(--text-muted); margin-top: 3px;">
+                Call the phone number printed on the back of your ATM/Debit card immediately to freeze transfers or compromised accounts.
+              </span>
+            </div>
+            <span class="scam-badge badge-amber">Urgent</span>
+          </li>
+        </ul>
+
+        <div style="background: var(--bg-subtle); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); font-size: 13px; color: var(--text-body);">
+          💡 <strong>Quick Action Advice:</strong> Take screenshots of suspicious WhatsApp/Telegram messages, transaction receipts, and phone numbers before blocking the scammer. Sri Lanka CERT and Police CID require these records when filing a formal cyber complaint.
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; padding-top: 10px; border-top: 1px solid var(--border-color);">
+          <a href="#tabs-section" class="btn btn-outline btn-sm" onclick="document.getElementById('helpline-modal').removeAttribute('data-open'); document.querySelector('.tab-btn[data-target-tab=\'tab-community\']').click();">
+            📢 Post to Community Warning Board
+          </a>
+          <button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('helpline-modal').removeAttribute('data-open');">
+            Understood, Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MOBILE FIXED BOTTOM NAVIGATION BAR (Thumb Friendly)
+       ======================================================================== -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Quick Navigation">
+    <a href="index.html" class="mobile-tab-item">
+      <span class="tab-icon">🏠</span>
+      <span class="tab-label">Home</span>
+    </a>
+    <a href="learn-scams.html" class="mobile-tab-item">
+      <span class="tab-icon">🎓</span>
+      <span class="tab-label">Learn</span>
+    </a>
+    <a href="scams-community.html" class="mobile-tab-item active">
+      <span class="tab-icon">📢</span>
+      <span class="tab-label">Alerts</span>
+    </a>
+    <button type="button" class="mobile-tab-item helpline-tab" data-open-helpline>
+      <span class="tab-icon">🚨</span>
+      <span class="tab-label">Report</span>
+    </button>
+  </nav>
+
+  <script src="app.js?v=2.2"></script>
+</body>
+</html>

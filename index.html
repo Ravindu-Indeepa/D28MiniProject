@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Scam Awareness Among Sri Lankan Youth | University of Ruhuna</title>
+  <meta name="description" content="Development Programme Mini Project Demo & Report — Faculty of Engineering, University of Ruhuna. A simple public awareness guide to spotting social media scams in Sri Lanka." />
+  <link rel="icon" type="image/png" href="ruhuna-logo.png" />
+  <link rel="stylesheet" href="styles.css?v=2.2" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. TOP ACADEMIC PROJECT BAR
+       ======================================================================== -->
+  <div class="uni-top-bar">
+    <div class="container uni-top-inner">
+      <div>
+        <span class="uni-badge-pill">Development Programme Mini Project</span>
+        <span style="margin-left: 8px;">Faculty of Engineering, University of Ruhuna (Hapugala, Galle)</span>
+      </div>
+      <div>
+        <button type="button" class="top-helpline-trigger" data-open-helpline title="Click to view all Sri Lankan emergency scam helplines">
+          🚨 Emergency Cyber Helpline (SL CERT): <strong>+94 11 269 1692</strong>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. QUICK ACCESS NAVIGATION BAR (With Ruhuna Logo in Top-Left)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-link">
+        <img
+          src="ruhuna-logo.png"
+          alt="University of Ruhuna Logo"
+          title="University of Ruhuna — Development Programme Mini Project"
+          class="brand-logo"
+        />
+        <div>
+          <div class="brand-title">Youth Cyber Shield LK</div>
+          <div class="brand-subtitle">Online Scam Awareness Initiative</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" style="color: var(--primary); font-weight: 700;">Home</a></li>
+        <li><a href="learn-scams.html">Learn About Scams</a></li>
+        <li><a href="scams-community.html">Scams &amp; Community Hub</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="btn btn-danger btn-sm" data-open-helpline style="display: inline-flex; align-items: center; gap: 5px;">
+          🚨 Where to Report
+        </button>
+        <button type="button" class="btn btn-primary btn-sm" data-open-report>
+          Read Project Report
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Menu Button -->
+      <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-section-title">Navigation Menu</div>
+        <ul class="mobile-nav-links">
+          <li>
+            <a href="index.html" class="mobile-nav-link active">
+              <span class="mobile-nav-icon">🏠</span>
+              <span>Home (Overview &amp; Findings)</span>
+            </a>
+          </li>
+          <li>
+            <a href="learn-scams.html" class="mobile-nav-link">
+              <span class="mobile-nav-icon">🎓</span>
+              <span>Learn About Scams (Lab &amp; Quiz)</span>
+              <span class="mobile-nav-tag">Interactive</span>
+            </a>
+          </li>
+          <li>
+            <a href="scams-community.html" class="mobile-nav-link">
+              <span class="mobile-nav-icon">📢</span>
+              <span>Scams &amp; Community Hub</span>
+              <span class="mobile-nav-tag">Live Feed</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-nav-section-title">Emergency &amp; Details</div>
+
+        <div class="mobile-nav-actions">
+          <button type="button" class="btn btn-danger btn-sm" data-open-helpline style="width: 100%; justify-content: center;">
+            🚨 Emergency Helplines (SL CERT &amp; CID)
+          </button>
+          <button type="button" class="btn btn-primary btn-sm" data-open-report style="width: 100%; justify-content: center;">
+            📄 Read Project Report &amp; Team Details
+          </button>
+        </div>
+
+        <div class="mobile-nav-footer">
+          Faculty of Engineering • University of Ruhuna<br />
+          Development Programme Mini Project
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       3. HERO SECTION (Clean Light Theme)
+       ======================================================================== -->
+  <section class="hero-section" id="top">
+    <div class="container hero-grid">
+      <!-- Left Column: Main Awareness Pitch -->
+      <div>
+        <span class="hero-tag">
+          🛡️ Public Awareness Demo • Sri Lankan Youth Study
+        </span>
+        <h1 class="hero-title">
+          Protecting Sri Lankan Youth from Social Media Scams
+        </h1>
+        <p class="hero-lead">
+          From WhatsApp and Telegram “part-time job” traps to fake parcel SMS links and 6-digit OTP account hijacking—learn how online scams target young people in Sri Lanka and verify suspicious messages before you click.
+        </p>
+
+        <div class="hero-actions">
+          <a href="learn-scams.html" class="btn btn-primary">🎓 Learn to Spot Scams</a>
+          <a href="scams-community.html#tab-community" class="btn btn-outline" style="background: rgba(255,255,255,0.9);">📢 Report a Scam</a>
+          <button type="button" class="btn btn-outline" style="background: rgba(255,255,255,0.9);" data-open-report>
+            View Project Report
+          </button>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="stat-item" data-pie-target="73" data-pie-color="#fb7185">
+            <div class="stat-pie-wrap">
+              <svg class="stat-pie-svg" viewBox="0 0 36 36" aria-hidden="true">
+                <circle class="stat-pie-bg" cx="18" cy="18" r="15.9155"></circle>
+                <circle class="stat-pie-wedge" cx="18" cy="18" r="7.9577" stroke="#fb7185" stroke-dasharray="0 100"></circle>
+                <circle class="stat-pie-ring" cx="18" cy="18" r="15.9155" stroke="#fb7185" stroke-dasharray="0 100"></circle>
+              </svg>
+              <strong class="stat-pie-num">73%</strong>
+            </div>
+            <span>Youth received job/task scam DMs (Survey N=420)</span>
+          </div>
+
+          <div class="stat-item" data-pie-target="68" data-pie-color="#fbbf24">
+            <div class="stat-pie-wrap">
+              <svg class="stat-pie-svg" viewBox="0 0 36 36" aria-hidden="true">
+                <circle class="stat-pie-bg" cx="18" cy="18" r="15.9155"></circle>
+                <circle class="stat-pie-wedge" cx="18" cy="18" r="7.9577" stroke="#fbbf24" stroke-dasharray="0 100"></circle>
+                <circle class="stat-pie-ring" cx="18" cy="18" r="15.9155" stroke="#fbbf24" stroke-dasharray="0 100"></circle>
+              </svg>
+              <strong class="stat-pie-num">68%</strong>
+            </div>
+            <span>Missed fake `.top` or `.xyz` phishing links</span>
+          </div>
+
+          <div class="stat-item" data-pie-target="81" data-pie-color="#38bdf8">
+            <div class="stat-pie-wrap">
+              <svg class="stat-pie-svg" viewBox="0 0 36 36" aria-hidden="true">
+                <circle class="stat-pie-bg" cx="18" cy="18" r="15.9155"></circle>
+                <circle class="stat-pie-wedge" cx="18" cy="18" r="7.9577" stroke="#38bdf8" stroke-dasharray="0 100"></circle>
+                <circle class="stat-pie-ring" cx="18" cy="18" r="15.9155" stroke="#38bdf8" stroke-dasharray="0 100"></circle>
+              </svg>
+              <strong class="stat-pie-num">81%</strong>
+            </div>
+            <span>Did not know how to report to SL CERT</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Quick Emergency & Golden Rules Snapshot Card -->
+      <aside class="ruhuna-hero-card" aria-label="Quick Cyber Safety Summary">
+        <span class="ruhuna-motto">⚡ 30-SECOND SAFETY CHECKLIST</span>
+        <div>
+          <h2>Before You Click or Transfer</h2>
+          <p>Three quick checks that prevent 95% of youth social media scams</p>
+        </div>
+
+        <div class="ruhuna-meta-box">
+          <div><strong>1. Job &amp; Task Offers:</strong> Never pay money upfront to unlock “VIP tasks” or commissions on Telegram/WhatsApp.</div>
+          <div><strong>2. 6-Digit SMS Codes:</strong> Never forward an OTP code—even if a friend’s account messages you urgently.</div>
+          <div><strong>3. Website Links:</strong> Beware of links ending in <code>.top</code>, <code>.xyz</code>, or <code>.vip</code> claiming to be SL Post or banks.</div>
+        </div>
+
+        <a href="learn-scams.html" class="btn btn-primary btn-sm" style="width: 100%; margin-bottom: 8px;">
+          🎓 Test a Suspicious Message in Lab →
+        </a>
+        <a href="scams-community.html" class="btn btn-outline btn-sm" style="width: 100%;">
+          📢 View Top 4 Scams &amp; Alert Board →
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. ABOUT OUR DEVELOPMENT PROGRAMME MINI PROJECT (University of Ruhuna)
+       ======================================================================== -->
+  <section class="section section-alt" id="about-project" style="padding-top: 48px; padding-bottom: 48px;">
+    <div class="container">
+      <div class="report-box" style="max-width: 980px; margin: 0 auto; box-shadow: 0 4px 14px rgba(0,0,0,0.05);">
+        <div style="margin-bottom: 14px;">
+          <span class="section-eyebrow" style="margin-bottom: 2px;">Faculty of Engineering • University of Ruhuna</span>
+          <h2 style="font-size: 20px; font-weight: 700; color: var(--text-main);">
+            About Our Development Programme Mini Project
+          </h2>
+        </div>
+
+        <p style="font-size: 14.5px; margin-bottom: 12px;">
+          This demo website was created for the <strong>Development Programme Mini Project</strong> at the <strong>Faculty of Engineering, University of Ruhuna (Hapugala, Galle)</strong> as a practical companion to our project report on <em>“Online Scam Awareness Among Sri Lankan Youth”</em>.
+        </p>
+        <p style="font-size: 14.5px; margin-bottom: 16px;">
+          Our goal is to provide a simple, accessible tool that students, schools, and families across Sri Lanka can use to identify deceptive social media messages and learn how to report cyber fraud immediately.
+        </p>
+
+        <div class="ruhuna-meta-box" style="margin-bottom: 18px; border: 1px solid var(--border-color); gap: 12px;">
+          <div style="display: flex; align-items: center; gap: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--border-color);">
+            <img
+              src="supervisor.jpg"
+              alt="Mr. B.D.S.M. Kavisigamuwa — Project Supervisor"
+              style="width: 68px; height: 68px; border-radius: 50%; object-fit: cover; object-position: center 22%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <div>
+              <div style="font-size: 12px; font-weight: 700; color: var(--primary); text-transform: uppercase;">
+                Project Supervisor
+              </div>
+              <div style="font-size: 16px; font-weight: 700; color: var(--text-main);">
+                Mr. B.D.S.M. Kavisigamuwa
+              </div>
+              <div style="font-size: 12.5px; color: var(--text-muted);">
+                Faculty of Engineering, University of Ruhuna
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;">
+              Group Members
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <img
+                  src="suraweera.jpg"
+                  alt="K.M.R.I. Suraweera"
+                  style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+                />
+                <div>
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <span style="font-size: 14.5px; font-weight: 700; color: var(--text-main);">K.M.R.I. Suraweera</span>
+                    <span class="scam-badge badge-blue" style="font-size: 10px; font-weight: 700; padding: 1px 6px; text-transform: uppercase;">Developer</span>
+                  </div>
+                  <div style="font-size: 12px; color: var(--text-muted);">Developer • Engineering Undergraduate • University of Ruhuna</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <img
+                  src="sumuditha.jpg"
+                  alt="K.H. Sumuditha"
+                  style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+                />
+                <div>
+                  <div style="font-size: 14.5px; font-weight: 700; color: var(--text-main);">K.H. Sumuditha</div>
+                  <div style="font-size: 12px; color: var(--text-muted);">Engineering Undergraduate • University of Ruhuna</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <img
+                  src="sumedhaarachchi.jpg"
+                  alt="S.D.T.A. Sumedhaarachchi"
+                  style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+                />
+                <div>
+                  <div style="font-size: 14.5px; font-weight: 700; color: var(--text-main);">S.D.T.A. Sumedhaarachchi</div>
+                  <div style="font-size: 12px; color: var(--text-muted);">Engineering Undergraduate • University of Ruhuna</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <img
+                  src="thaaniyaluxman.jpg"
+                  alt="S. Thaaniyaluxman"
+                  style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+                />
+                <div>
+                  <div style="font-size: 14.5px; font-weight: 700; color: var(--text-main);">S. Thaaniyaluxman</div>
+                  <div style="font-size: 12px; color: var(--text-muted);">Engineering Undergraduate • University of Ruhuna</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+          <button type="button" class="btn btn-primary" data-open-report>
+            Read Full Report Abstract &amp; Findings
+          </button>
+          <a href="https://www.eng.ruh.ac.lk" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            Visit Faculty Website (eng.ruh.ac.lk)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. INTERACTIVE EXPLORATION PATHWAYS
+       ======================================================================== -->
+  <section class="section" id="explore-modules" style="padding-top: 48px; padding-bottom: 56px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Practical Tools &amp; Public Defense</span>
+        <h2 class="section-title">Explore Our Cyber Safety Hubs</h2>
+        <p class="section-desc">
+          Engineered by 1st-year undergraduates at the Faculty of Engineering, University of Ruhuna, to equip Sri Lankan students, schools, and families with practical scam awareness.
+        </p>
+      </div>
+
+      <div class="pathway-grid">
+        <!-- Pathway 1: Learn About Scams -->
+        <div class="pathway-card" style="border-top: 4px solid #6366f1;">
+          <div>
+            <div style="font-size: 32px; margin-bottom: 12px;">🎓</div>
+            <span class="scam-badge badge-blue" style="margin-bottom: 8px;">Interactive Academy</span>
+            <h3 style="font-size: 20px; font-weight: 700; color: var(--text-main); margin-bottom: 10px;">
+              Learn About Scams &amp; Test Links
+            </h3>
+            <p style="font-size: 14.5px; color: var(--text-body); margin-bottom: 18px; line-height: 1.6;">
+              Test suspicious WhatsApp or SMS links with our real-time heuristic scanner, master the 3 golden safety rules, and test your cyber reflexes with the interactive 4-question youth scam spotter quiz.
+            </p>
+          </div>
+          <a href="learn-scams.html" class="btn btn-primary" style="width: 100%; text-align: center;">
+            Open Learning Lab &amp; Quiz →
+          </a>
+        </div>
+
+        <!-- Pathway 2: Scams & Community Hub -->
+        <div class="pathway-card" style="border-top: 4px solid #2563eb;">
+          <div>
+            <div style="font-size: 32px; margin-bottom: 12px;">🛡️</div>
+            <span class="scam-badge badge-red" style="margin-bottom: 8px;">Crowdsourced Watch</span>
+            <h3 style="font-size: 20px; font-weight: 700; color: var(--text-main); margin-bottom: 10px;">
+              Top 4 Scams &amp; Community Board
+            </h3>
+            <p style="font-size: 14.5px; color: var(--text-body); margin-bottom: 18px; line-height: 1.6;">
+              Study our empirical survey findings on the 4 leading attack vectors targeting Sri Lankan youth, or post suspicious phone numbers and fake links to warn society in real time.
+            </p>
+          </div>
+          <a href="scams-community.html" class="btn btn-outline" style="width: 100%; text-align: center;">
+            Open Scams &amp; Community Hub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. CLEAN LIGHT FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-note">
+        <strong>Development Programme Mini Project Demo</strong><br />
+        Faculty of Engineering, University of Ruhuna • Hapugala, Galle, Sri Lanka
+      </div>
+
+      <div class="footer-note">
+        Built for Public Cyber Safety Awareness • © 2026 Project Team
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       11. PROJECT REPORT SUMMARY MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="report-modal" role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <div style="font-size: 12px; font-weight: 700; color: var(--ruhuna-maroon); text-transform: uppercase;">
+            University of Ruhuna • Faculty of Engineering
+          </div>
+          <h3 id="report-modal-title" style="font-size: 18px; font-weight: 700; color: var(--text-main);">
+            Development Programme Mini Project Report Summary
+          </h3>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="close-report-modal">Close ✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div style="background: var(--bg-subtle); padding: 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+          <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">
+            Project Title
+          </div>
+          <div style="font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 12px;">
+            Online Scam Awareness Among Sri Lankan Youth: Survey Analysis &amp; Preventive Web Platform
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; padding-top: 10px; border-top: 1px solid var(--border-color);">
+            <img
+              src="supervisor.jpg"
+              alt="Mr. B.D.S.M. Kavisigamuwa"
+              style="width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: center 22%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <div style="font-size: 13.5px; color: var(--text-body);">
+              <strong>Project Supervisor:</strong> Mr. B.D.S.M. Kavisigamuwa<br />
+              <strong>Group Members:</strong> K.M.R.I. Suraweera (Developer), K.H. Sumuditha, S.D.T.A. Sumedhaarachchi, S. Thaaniyaluxman
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border-color);">
+            <img
+              src="suraweera.jpg"
+              alt="K.M.R.I. Suraweera (Developer)"
+              style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <span style="font-size: 13px; font-weight: 600; color: var(--text-main);">K.M.R.I. Suraweera <small style="color: var(--primary); font-weight: 700;">(Developer)</small></span>
+            <span style="color: var(--border-color);">•</span>
+            <img
+              src="sumuditha.jpg"
+              alt="K.H. Sumuditha"
+              style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <span style="font-size: 13px; font-weight: 600; color: var(--text-main);">K.H. Sumuditha</span>
+            <span style="color: var(--border-color);">•</span>
+            <img
+              src="sumedhaarachchi.jpg"
+              alt="S.D.T.A. Sumedhaarachchi"
+              style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <span style="font-size: 13px; font-weight: 600; color: var(--text-main);">S.D.T.A. Sumedhaarachchi</span>
+            <span style="color: var(--border-color);">•</span>
+            <img
+              src="thaaniyaluxman.jpg"
+              alt="S. Thaaniyaluxman"
+              style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2px solid var(--primary); flex-shrink: 0;"
+            />
+            <span style="font-size: 13px; font-weight: 600; color: var(--text-main);">S. Thaaniyaluxman</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; color: var(--text-main); margin-bottom: 6px;">1. Executive Abstract</h4>
+          <p style="font-size: 14.5px; color: var(--text-body);">
+            With high social media penetration among Sri Lankan youth aged 16–26, scammers increasingly use WhatsApp, Telegram, Instagram, and TikTok to run “part-time task” Ponzi schemes, phishing giveaways, and OTP account takeovers. Our Development Programme Mini Project survey (<strong>N = 420</strong> respondents) found that while youth use social platforms daily, <strong>68.4%</strong> struggle to spot spoofed website domains (<code>.top</code>, <code>.xyz</code>) on mobile phones and <strong>81.0%</strong> are unaware of official reporting procedures through Sri Lanka CERT|CC.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 15px; font-weight: 700; color: var(--text-main); margin-bottom: 6px;">2. Key Survey Takeaways (N = 420 Youth Respondents)</h4>
+          <ul style="padding-left: 20px; font-size: 14.5px; color: var(--text-body); display: flex; flex-direction: column; gap: 6px;">
+            <li><strong>73.1%</strong> received unsolicited WhatsApp or Telegram messages offering high daily payouts for liking social media posts.</li>
+            <li><strong>42.0%</strong> of reported financial losses originated from “VIP Prepaid Task” traps after scammers paid a small initial bonus (Rs. 1,000–1,500) to build trust.</li>
+            <li><strong>68.4%</strong> could not reliably distinguish fake courier/telecom phishing links from official <code>.lk</code> websites.</li>
+          </ul>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: flex-end; padding-top: 12px; border-top: 1px solid var(--border-color);">
+          <button type="button" class="btn btn-primary btn-sm" id="modal-try-scanner-btn">
+            Try the Scam Message Checker
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       9. EMERGENCY SCAM HELPLINES POPUP MODAL (Quick Access)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="helpline-modal" role="dialog" aria-modal="true" aria-labelledby="helpline-modal-title">
+    <div class="modal-card" style="border-top: 4px solid #e11d48; max-width: 680px;">
+      <div class="modal-head" style="border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
+        <div>
+          <div style="font-size: 12px; font-weight: 700; color: #e11d48; text-transform: uppercase; letter-spacing: 0.5px;">
+            🚨 Emergency Assistance • Sri Lanka
+          </div>
+          <h3 id="helpline-modal-title" style="font-size: 20px; font-weight: 700; color: var(--text-main);">
+            Where to Report Scams in Sri Lanka
+          </h3>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="close-helpline-modal">Close ✕</button>
+      </div>
+
+      <div class="modal-body" style="display: flex; flex-direction: column; gap: 16px; padding: 22px;">
+        <p style="font-size: 14.5px; color: var(--text-muted); margin: 0;">
+          If you or someone you know has shared a 6-digit OTP, clicked a phishing link, or transferred money to a scammer, contact these official organizations immediately:
+        </p>
+
+        <ul class="helpline-list" style="margin: 0;">
+          <li class="helpline-item">
+            <div>
+              <strong style="color: var(--text-main); font-size: 15px;">Sri Lanka CERT|CC (National Cyber Security Center)</strong>
+              <span style="display: block; font-size: 13.5px; color: var(--text-muted); margin-top: 3px;">
+                Hotline: <strong>+94 11 269 1692</strong> • Email: <a href="mailto:report@cert.gov.lk" style="color: var(--primary);">report@cert.gov.lk</a>
+              </span>
+            </div>
+            <button type="button" class="btn btn-outline btn-sm" data-copy="+94 11 269 1692">
+              Copy
+            </button>
+          </li>
+          <li class="helpline-item">
+            <div>
+              <strong style="color: var(--text-main); font-size: 15px;">CID Cyber Crime Division (Sri Lanka Police)</strong>
+              <span style="display: block; font-size: 13.5px; color: var(--text-muted); margin-top: 3px;">
+                Tel: <strong>011-2422176</strong> • Police Emergency: <strong>119</strong>
+              </span>
+            </div>
+            <span class="scam-badge badge-red">24/7 Police</span>
+          </li>
+          <li class="helpline-item">
+            <div>
+              <strong style="color: var(--text-main); font-size: 15px;">Your Bank’s 24/7 Fraud &amp; Card Hotline</strong>
+              <span style="display: block; font-size: 13.5px; color: var(--text-muted); margin-top: 3px;">
+                Call the phone number printed on the back of your ATM/Debit card immediately to freeze transfers or compromised accounts.
+              </span>
+            </div>
+            <span class="scam-badge badge-amber">Urgent</span>
+          </li>
+        </ul>
+
+        <div style="background: var(--bg-subtle); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); font-size: 13px; color: var(--text-body);">
+          💡 <strong>Quick Action Advice:</strong> Take screenshots of suspicious WhatsApp/Telegram messages, transaction receipts, and phone numbers before blocking the scammer. Sri Lanka CERT and Police CID require these records when filing a formal cyber complaint.
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; padding-top: 10px; border-top: 1px solid var(--border-color);">
+          <a href="scams-community.html#tab-community" class="btn btn-outline btn-sm" onclick="document.getElementById('helpline-modal').removeAttribute('data-open');">
+            📢 Post to Community Warning Board
+          </a>
+          <button type="button" class="btn btn-primary btn-sm" onclick="document.getElementById('helpline-modal').removeAttribute('data-open');">
+            Understood, Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MOBILE FIXED BOTTOM NAVIGATION BAR (Thumb Friendly)
+       ======================================================================== -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Quick Navigation">
+    <a href="index.html" class="mobile-tab-item active">
+      <span class="tab-icon">🏠</span>
+      <span class="tab-label">Home</span>
+    </a>
+    <a href="learn-scams.html" class="mobile-tab-item">
+      <span class="tab-icon">🎓</span>
+      <span class="tab-label">Learn</span>
+    </a>
+    <a href="scams-community.html" class="mobile-tab-item">
+      <span class="tab-icon">📢</span>
+      <span class="tab-label">Alerts</span>
+    </a>
+    <button type="button" class="mobile-tab-item helpline-tab" data-open-helpline>
+      <span class="tab-icon">🚨</span>
+      <span class="tab-label">Report</span>
+    </button>
+  </nav>
+
+  <script src="app.js?v=2.2"></script>
+</body>
+</html>
