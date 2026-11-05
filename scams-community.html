@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scams &amp; Community Alert Hub | Youth Cyber Shield LK — University of Ruhuna</title>
+  <title>Report a Scam | Youth Cyber Shield LK — University of Ruhuna</title>
   <meta name="description" content="Development Programme Mini Project Demo & Report — Top 4 Social Media Scams & Community Scam Alert Board for Sri Lankan Youth. Faculty of Engineering, University of Ruhuna." />
   <link rel="icon" type="image/png" href="ruhuna-logo.png" />
   <link rel="stylesheet" href="styles.css?v=2.7" />
@@ -48,7 +48,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="learn-scams.html">Learn About Scams</a></li>
-        <li><a href="scams-community.html" style="color: var(--primary); font-weight: 700;">Scams &amp; Community Hub</a></li>
+        <li><a href="scams-community.html" style="color: var(--primary); font-weight: 700;">Report a Scam</a></li>
         <li>
           <a
             href="https://forms.gle/JAWZWWdivyBygaiA6"
@@ -113,7 +113,7 @@
           <li>
             <a href="scams-community.html" class="mobile-nav-link active">
               <span class="mobile-nav-icon">📢</span>
-              <span>Scams &amp; Community Hub</span>
+              <span>Report a Scam</span>
               <span class="mobile-nav-tag">Live Feed</span>
             </a>
           </li>
@@ -268,19 +268,6 @@
           class="tab-btn active"
           role="tab"
           aria-selected="true"
-          aria-controls="tab-scams"
-          data-target-tab="tab-scams"
-          id="btn-tab-scams"
-        >
-          <span>🎯 Top 4 Common Scams</span>
-          <span class="tab-badge badge-red">4 Types</span>
-        </button>
-
-        <button
-          type="button"
-          class="tab-btn"
-          role="tab"
-          aria-selected="false"
           aria-controls="tab-community"
           data-target-tab="tab-community"
           id="btn-tab-community"
@@ -288,12 +275,25 @@
           <span>📢 Community Alert Board</span>
           <span class="tab-badge badge-amber">Share &amp; View</span>
         </button>
+
+        <button
+          type="button"
+          class="tab-btn"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tab-scams"
+          data-target-tab="tab-scams"
+          id="btn-tab-scams"
+        >
+          <span>🎯 Top 4 Common Scams</span>
+          <span class="tab-badge badge-red">4 Types</span>
+        </button>
       </div>
 
       <!-- ====================================================================
            TAB PANE 1: Top 4 Social Media Scams Targeting Sri Lankan Youth
            ==================================================================== -->
-      <div class="tab-pane active" id="tab-scams" role="tabpanel" aria-labelledby="btn-tab-scams">
+      <div class="tab-pane" id="tab-scams" role="tabpanel" aria-labelledby="btn-tab-scams">
         <div class="scam-grid">
           <!-- Scam Card 1 -->
           <article class="scam-card">
@@ -380,7 +380,7 @@
       <!-- ====================================================================
            TAB PANE 2: Found a Scam? Share It to Warn Sri Lankan Society
            ==================================================================== -->
-      <div class="tab-pane" id="tab-community" role="tabpanel" aria-labelledby="btn-tab-community">
+      <div class="tab-pane active" id="tab-community" role="tabpanel" aria-labelledby="btn-tab-community">
         <div class="community-grid">
           <!-- Left Column: Submit a Scam Alert Form -->
           <div class="report-form-card">
