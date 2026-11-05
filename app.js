@@ -948,7 +948,7 @@
       label: i < communityLabels.length ? communityLabels[i] : null,
       pulse: Math.random() * Math.PI * 2,
       pulseSpeed: 0.03 + Math.random() * 0.02,
-      color: i % 3 === 0 ? "#38bdf8" : i % 3 === 1 ? "#34d399" : "#818cf8"
+      color: i % 3 === 0 ? "#38bdf8" : i % 3 === 1 ? "#60a5fa" : "#0ea5e9"
     }));
 
     // Occasional broadcast ripple wave
@@ -1103,20 +1103,20 @@
 
     // Key Learning Concepts & Module Nodes
     const conceptNodes = [
-      { label: "🎓 Academy Core", color: "#818cf8", isKey: true },
+      { label: "🎓 Academy Core", color: "#60a5fa", isKey: true },
       { label: "🧪 Heuristic Lab", color: "#38bdf8", isKey: true },
-      { label: "🛡️ 3 Safety Rules", color: "#34d399", isKey: true },
-      { label: "🏆 Spotter Quiz", color: "#facc15", isKey: true },
-      { label: "⚡ OTP Safeguard", color: "#f43f5e", isKey: false },
-      { label: "🔍 .lk Domain Guard", color: "#38bdf8", isKey: false },
-      { label: "💡 Job Scam Defense", color: "#a855f7", isKey: false },
-      { label: "🚨 CERT 1692", color: "#f97316", isKey: false },
+      { label: "🛡️ 3 Safety Rules", color: "#0ea5e9", isKey: true },
+      { label: "🏆 Spotter Quiz", color: "#93c5fd", isKey: true },
+      { label: "⚡ OTP Safeguard", color: "#38bdf8", isKey: false },
+      { label: "🔍 .lk Domain Guard", color: "#60a5fa", isKey: false },
+      { label: "💡 Job Scam Defense", color: "#0ea5e9", isKey: false },
+      { label: "🚨 CERT 1692", color: "#93c5fd", isKey: false },
       { label: "📊 Risk Analyzer", color: "#60a5fa", isKey: false },
-      { label: "🧠 Defense Heuristics", color: "#818cf8", isKey: false },
-      { label: "🔒 Account Integrity", color: "#2dd4bf", isKey: false },
-      { label: "👥 Student Shield", color: "#a78bfa", isKey: false },
-      { label: "✓ Zero Trust DM", color: "#4ade80", isKey: false },
-      { label: "📱 WhatsApp Watch", color: "#22c55e", isKey: false }
+      { label: "🧠 Defense Heuristics", color: "#38bdf8", isKey: false },
+      { label: "🔒 Account Integrity", color: "#0ea5e9", isKey: false },
+      { label: "👥 Student Shield", color: "#93c5fd", isKey: false },
+      { label: "✓ Zero Trust DM", color: "#38bdf8", isKey: false },
+      { label: "📱 WhatsApp Watch", color: "#60a5fa", isKey: false }
     ];
 
     const nodesCount = Math.min(22, Math.max(14, Math.floor(w / 55)));
@@ -1189,7 +1189,7 @@
         if (fp.x < 0) fp.x = w;
         if (fp.x > w) fp.x = 0;
 
-        ctx.fillStyle = `rgba(165, 180, 252, ${fp.alpha})`;
+        ctx.fillStyle = `rgba(147, 197, 253, ${fp.alpha})`;
         ctx.fillText(fp.text, fp.x, fp.y);
       }
 
@@ -1217,7 +1217,7 @@
             ctx.beginPath();
             ctx.moveTo(mouse.x, mouse.y);
             ctx.lineTo(n.x, n.y);
-            ctx.strokeStyle = `rgba(129, 140, 248, ${0.4 * force})`;
+            ctx.strokeStyle = `rgba(56, 189, 248, ${0.4 * force})`;
             ctx.lineWidth = 1.2;
             ctx.stroke();
           }
@@ -1238,7 +1238,7 @@
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = `rgba(129, 140, 248, ${alpha})`;
+            ctx.strokeStyle = `rgba(56, 189, 248, ${alpha})`;
             ctx.lineWidth = 1;
             ctx.stroke();
 
@@ -1280,7 +1280,7 @@
           ctx.save();
           ctx.beginPath();
           ctx.arc(n.x, n.y, n.radius + 10, 0, Math.PI * 2);
-          ctx.strokeStyle = `rgba(129, 140, 248, 0.28)`;
+          ctx.strokeStyle = `rgba(56, 189, 248, 0.28)`;
           ctx.setLineDash([3, 4]);
           ctx.lineWidth = 1;
           ctx.stroke();
